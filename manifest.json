@@ -1,10 +1,11 @@
 {
     "name": "Diavgeia Chrome Extension",
     "version": "1.1",
+    "author": "Konstantinos Sfikas, PhD",
     "description": "Unofficial diavgeia.gov.gr extension for various manipulations of the ADA number",
     "permissions": ["storage", "clipboardWrite", "clipboardRead", "notifications", "tabs"],
     "background": {
-        "scripts": ["background.js"]
+        "scripts": ["scripts/background.js"]
     },
     "icons": {
         "16": "images/icon.png",
@@ -12,7 +13,7 @@
         "128": "images/icon.png"
     },
     "browser_action": {
-        "default_popup": "popup.html"
+        "default_popup": "html/popup.html"
     },
     "manifest_version": 2
 }

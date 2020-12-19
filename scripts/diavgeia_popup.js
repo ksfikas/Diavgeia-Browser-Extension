@@ -11,7 +11,7 @@ copy_ada_to_clipboard.onclick = function(element) {
         console.log(`current ADA: ${ada}`);
 
         navigator.clipboard.writeText(ada).then (function (){
-          let notification_image = `images/diavgeia_all_logo.png`;
+          let notification_image = `../images/icon.png`;
           let notification_text = `Επέκταση Διαύγειας`;
           let notification = new Notification(`Ο ΑΔΑ: ${ada} αντιγράφηκε στο clipboard`, {body: notification_text, icon: notification_image});
           console.log(`ADA: ${ada} copied to clipboard`);

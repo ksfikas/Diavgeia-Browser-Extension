@@ -6,13 +6,13 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
     console.log(`this is a diavgeia valid ADA page`);
     chrome.browserAction.setPopup({
         tabId: tabId,
-        popup: `diavgeia_popup.html`
+        popup: `../html/diavgeia_popup.html`
     });
   } else {
     console.log(`this is NOT a diavgeia valid ADA page`);
       chrome.browserAction.setPopup({
           tabId: tabId,
-          popup: `popup.html`
+          popup: `../html/popup.html`
       });
   }
 });
