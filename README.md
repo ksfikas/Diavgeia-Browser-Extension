@@ -1,1 +1,1 @@
-# diavgeia_extension
+# Diavgeia-Browser-Extension
