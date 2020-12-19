@@ -1,13 +1,13 @@
 {
     "name": "Diavgeia Chrome Extension",
     "version": "1.0",
-    "description": "Unofficial diavgeia.gov.gr extension that allows grabbing of the ADA number easily from an open document",
+    "description": "Unofficial diavgeia.gov.gr extension for various manipulations of the ADA number",
     "permissions": ["declarativeContent", "storage", "clipboardWrite", "clipboardRead", "notifications", "tabs"],
     "background": {
         "scripts": ["background.js"],
         "persistent": false
     },
-    "page_action": {
+    "browser_action": {
         "default_popup": "popup.html"
     },
     "manifest_version": 2
