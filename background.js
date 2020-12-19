@@ -1,18 +1,18 @@
-var rule = {
-  conditions: [
-    new chrome.declarativeContent.PageStateMatcher({
-        pageUrl: {hostContains: 'diavgeia.gov.gr', pathContains: '/decision/' },
-    }),
-    new chrome.declarativeContent.PageStateMatcher({
-        pageUrl: {hostContains: 'diavgeia.gov.gr', pathContains: '/doc/' },
-    }),
-  ],
-    actions: [new chrome.declarativeContent.ShowPageAction()]
-};
-
-
-chrome.runtime.onInstalled.addListener(function() {
-    chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
-      chrome.declarativeContent.onPageChanged.addRules([rule]);
-  });
+chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
+  if (tab.status !== "complete") {
+    return;
+  }
+  if (tab.url.includes(`diavgeia.gov.gr`) && (tab.url.includes(`/decision/`) || tab.url.includes(`/doc/`))) {
+    console.log("diavgeia!");
+    chrome.browserAction.setPopup({
+        tabId: tabId,
+        popup: 'diavgeia_popup.html'
+    });
+  } else {
+    console.log("NOT diavgeia!");
+      chrome.browserAction.setPopup({
+          tabId: tabId,
+          popup: 'popup.html'
+      });
+  }
 });
