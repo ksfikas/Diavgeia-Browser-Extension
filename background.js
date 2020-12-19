@@ -1,5 +1,5 @@
 chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
-  if (tab.status !== `complete`) {
+  if (tab.status !== "complete") {
     return;
   }
   if (tab.url.includes(`diavgeia.gov.gr`) && (tab.url.includes(`/decision/`) || tab.url.includes(`/doc/`))) {
