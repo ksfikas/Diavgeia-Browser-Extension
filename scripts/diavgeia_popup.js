@@ -13,7 +13,18 @@ copy_ada_to_clipboard.onclick = function(element) {
         navigator.clipboard.writeText(ada).then (function (){
           let notification_image = `../images/icon.png`;
           let notification_text = `Επέκταση Διαύγειας`;
-          let notification = new Notification(`Ο ΑΔΑ: ${ada} αντιγράφηκε στο clipboard`, {body: notification_text, icon: notification_image});
+          let notification_message = `Ο ΑΔΑ: ${ada} αντιγράφηκε στο clipboard`;
+          //let notification = new Notification(`Ο ΑΔΑ: ${ada} αντιγράφηκε στο clipboard`, {body: notification_text, icon: notification_image});
+          var opt = {
+            iconUrl: notification_image,
+            type: `basic`,
+            title: notification_text,
+            message: notification_message,
+            isClickable: false,
+          };
+          chrome.notifications.clear('copy_notification');
+          chrome.notifications.create('copy_notification', opt);
+
           console.log(`ADA: ${ada} copied to clipboard`);
         }, function(){
           console.error(`ADA: ${ada} was NOT copied to clipboard!`);
