@@ -1,3 +1,5 @@
+
+
 copy_ada_button.onclick = function(element) {
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
         let url = tabs[0].url;
