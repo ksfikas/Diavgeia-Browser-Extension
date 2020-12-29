@@ -1,6 +1,6 @@
 {
     "name": "Επέκταση Διαύγειας",
-    "version": "1.3",
+    "version": "1.4",
     "author": "Konstantinos Sfikas, PhD",
     "description": "Unofficial diavgeia.gov.gr extension for various manipulations of the ADA number",
     "permissions": ["storage", "clipboardWrite", "clipboardRead", "notifications", "tabs"],
