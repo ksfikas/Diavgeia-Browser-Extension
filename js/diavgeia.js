@@ -1,5 +1,3 @@
-
-
 copy_ada_button.onclick = function(element) {
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
         let url = tabs[0].url;
@@ -13,9 +11,9 @@ copy_ada_button.onclick = function(element) {
         console.log(`current ADA: ${ada}`);
 
         navigator.clipboard.writeText(ada).then (function (){
-          let notification_image = `../images/icon.png`;
+          let notification_image = `../images/icon_128.png`;
           let notification_text = `Επέκταση Διαύγειας`;
-          let notification_message = `Ο ΑΔΑ: ${ada} αντιγράφηκε στο clipboard`;
+          let notification_message = `Ο ΑΔΑ: ${ada} αντιγράφηκε στο πρόχειρο`;
           //let notification = new Notification(`Ο ΑΔΑ: ${ada} αντιγράφηκε στο clipboard`, {body: notification_text, icon: notification_image});
           var opt = {
             iconUrl: notification_image,

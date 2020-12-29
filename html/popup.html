@@ -1,29 +1,59 @@
-<!DOCTYPE html>
-  <html>
+<!doctype html>
+  <html lang="el">
     <head>
       <meta charset="UTF-8">
-      <link rel="stylesheet" href="../stylesheets/popup.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="../css/bootstrap.min.css">
+      <script src="../js/bootstrap.bundle.min.js"></script>
       </style>
     </head>
-    <body>
-      <div class="vertical-center">
-        <table>
-          <td>
-            <img src="../images/diavgeia_logo.png">
-          </td>
-          <td id="ada_page_info">
-            ΑΔΑ Σελίδας:
-          </td>
-        </table>
-        <hr>
-        <p>
-          <button title="Ενεργό μόνο σε σελίδες αναρτήσεων της Διαύγειας" id="copy_ada_button" disabled>Αντιγραφή ΑΔΑ</button>
-        </p>
-        <!-- <p>
-          <button title="Ενεργό μόνο όταν το clipboard περιλαμβάνει αριθμό ΑΔΑ" id="load_ada_button" disabled>Άνοιγμα ανάρτησης</button>
-        </p> -->
+    <body style="width: 500px;">
+      <div class="container mb-4 py-2 shadow border-bottom border-5 border-primary" style="background-color: #003476;">
+        <div class="row">
+          <div class="col-sm w-50">
+            <a href="https://diavgeia.gov.gr"><img src="../images/diavgeia_logo_inv.png" width="150"></a>
+          </div>
+          <!-- <div class="col-sm w-50 text-white" id="info_pane">
+            <h6>Πληροφορίες Σελίδας Ανάρτησης:</h6>
+          </div> -->
+        </div>
       </div>
-      <script src="../scripts/popup.js"></script>
-      <script src="../scripts/diavgeia.js"></script>
+
+      <div class="container mb-4">
+        <div class="row">
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Αντιγραφή ΑΔΑ στο πρόχειρο</h5>
+                <p class="card-text" id="card_copy_ada_text">With supporting text below as a natural lead-in to additional content.</p>
+                <span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" title="Ενεργό μόνο σε σελίδες αναρτήσεων της Διαύγειας">
+                  <button type="button" copy_ada_button.data-bs-toggle = "tooltip" class="btn btn-primary" title="Πατήστε για αντιγραφή του αριθμού ΑΔΑ στο clipboard" id="card_copy_ada_button" disabled>Αντιγραφή ΑΔΑ</button>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Άνοιγμα ανάρτησης από το πρόχειρο</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <p>
+                  <span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" title="Ενεργό μόνο σε σελίδες αναρτήσεων της Διαύγειας">
+                    <button title="Ενεργό μόνο όταν το clipboard περιλαμβάνει αριθμό ΑΔΑ" class="btn btn-primary" id="load_decision_button" disabled>Άνοιγμα ανάρτησης</button>
+                  </span>
+                </p>
+                <p>
+                  <span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" title="Ενεργό μόνο σε σελίδες αναρτήσεων της Διαύγειας">
+                    <button title="Ενεργό μόνο όταν το clipboard περιλαμβάνει αριθμό ΑΔΑ" class="btn btn-primary" id="load_document_button" disabled>Άνοιγμα εγγράφου</button>
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script src="../js/popup.js"></script>
+      <script src="../js/diavgeia.js"></script>
     </body>
   </html>
